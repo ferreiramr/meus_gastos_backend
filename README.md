@@ -1,2 +1,8 @@
-# meu_gastos
-Aplicação com o Gabriel Silva para ajuda em sua jornada rumo a programação
+# Projeto meus gastos Backend.
+## TODO
+
+- [ ] Endpoint de login;
+- [ ] Endpoint de logoff;
+- [ ] Endpoint de cadastro;
+- [ ] Endpoint de status;
+- [ ] Endpoint adicionar transação financeira.
