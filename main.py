@@ -2,6 +2,7 @@ from fastapi.exceptions import HTTPException
 from fastapi import FastAPI
 from fastapi import status
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 
 from models import User, UserSingUp, UserLogin
 
@@ -9,6 +10,18 @@ app = FastAPI()
 joao = User()
 usuarios = [joao]
 
+origins = [
+    "http://localhost:3000",
+]
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.post("/singin")
 async def singin(user: UserSingUp):
